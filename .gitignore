@@ -1,0 +1,17 @@
+# Environments
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Databases and results
+results/*.db
+results/*.csv
+*.db
+*.csv
+
+# IDE settings
+.vscode/
+
+# Optuna / logs
+*.log
