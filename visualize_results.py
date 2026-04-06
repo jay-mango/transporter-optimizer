@@ -7,7 +7,7 @@ from optuna.visualization.matplotlib import plot_param_importances
 def main():
     # Connect to the SQLite database
     # Switch this to optimization_results.db or whichever you want to visualize
-    db_url = "sqlite:///results/optimization_results2.db"
+    db_url = "sqlite:///results/optimization_results5.db"
     study_name = "mte351_optimization5"  # The default name unless you specified otherwise
     
     print(f"Loading study from {db_url}...")

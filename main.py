@@ -110,13 +110,13 @@ if __name__ == "__main__":
     # We want to MAXIMIZE the distance
     study = optuna.create_study(
         study_name='mte351_optimization5',
-        storage='sqlite:///results/optimization_results5.db',
+        storage='sqlite:///results/optimization_results4.db',
         load_if_exists=True,
         direction='maximize'
     )
     
     try:
-        study.optimize(objective, n_trials=50)  
+        study.optimize(objective, n_trials=1)  
     except KeyboardInterrupt:
         print("\n\nOptuna Optimization Stopped by User!")
 
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     if not df.empty:
         # Let's save a clean sorted CSV so the best distances are at the top!
         df_sorted = df.sort_values(by="value", ascending=False)
-        df_sorted.to_csv("results/optimization_history5.csv", index=False)
+        df_sorted.to_csv("results/optimization_history4.csv", index=False)
         print("Saved iteration history to results/optimization_history5.csv (Sorted by Best Score)")
     else:
         print("No successful trials completed. No CSV saved.")
